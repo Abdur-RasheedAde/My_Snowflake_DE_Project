@@ -1,6 +1,6 @@
 # Cricket Analaysis Project with Snowflake
 
-![Slide1]((https://github.com/Abdur-RasheedAde/Snowflake_Projects/blob/main/snowflake.jpg))
+![Slide1](https://github.com/Abdur-RasheedAde/Snowflake_Projects/blob/main/snowflake.jpg)
 
 ##  Introduction
 This is a Big Data (End-to-end) project exploring snowflake cloud. The project injest a json file, perform all necessary ETL processes and load load it to appropriate datawarehuse 
