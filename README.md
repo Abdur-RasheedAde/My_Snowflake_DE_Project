@@ -20,22 +20,22 @@ The data used is a Cricket World Cup match in 2023 which comes in a json file in
 + Feedback and Continuous Improvement
   
 ## Data Engineering Process
-1. Creation of database and 4 Schemas: A database (DB) known as CRICKET is created with 4 Schemas (LAND, RAW, CLEAN and CONSUMPTION) for proper logical description and arrangement of the DB. The Star-schema was eventually used in Data Modelling so as to give the datawarehouse a legible understading (get the code here)[] 
-2. Data Injestion and Loading: Data is injested into the LAND schema and reloaded into the RAW schema (access the code here)[]
-3. Flattening of Data: Since the data uploaded are ojects, they need to be flatenned so as to create the CLEAN proper column based table (get code here)[]
-4. Creation of Player and Country table: This is achieved by flattening the json objects in the RAW schema to create a Player and Country column Table (get code here). These 2 tables are connected with the help of a primary and foreign key respectively (get code here)[] 
-5. Extract Data from Inning Array: This is another strategy of the ETL process to transform an array into a proper column based table. This is used to get the Delivery clean Table
-6. Data Validation: There is an absolute need to check the degree of correctness of a data after the whole ETL process (get code here) [] 
-7. Creation of Dimention Tables: 5 Dimention tables are created including referee_dim, team_dim, player_dim, venue_dim and match_type_dim tables while poluating data into them and establishing different relationship between them as well
-8. Creation of Date Dimention Table: A date dimention table is also created so as to link it to the match_fact_table
-9. Creation of Fact_Tables: 2 Fact tables are created Match_type and Delivery tables and are both populated with data
+1. Creation of database and 4 Schemas: A database (DB) known as CRICKET is created with 4 Schemas (LAND, RAW, CLEAN and CONSUMPTION) for proper logical description and arrangement of the DB. The Star-schema was eventually used in Data Modelling so as to give the datawarehouse a legible understading. (get the code here)[] 
+2. Data Injestion and Loading: Data is injested into the LAND schema and reloaded into the RAW schema. (access the code here)[]
+3. Flattening of Data: Since the data uploaded are ojects, they need to be flatenned so as to create the CLEAN proper column based table. (get code here)[]
+4. Creation of Player and Country table: This is achieved by flattening the json objects in the RAW schema to create a Player and Country column Table (get code here). These 2 tables are connected with the help of a primary and foreign key respectively. (get code here)[] 
+5. Extract Data from Inning Array: This is another strategy of the ETL process to transform an array into a proper column based table. This is used to get the Delivery clean Table. (get code here)[] 
+6. Data Validation: There is an absolute need to check the degree of correctness of a data after the whole ETL process. (get code here) [] 
+7. Creation of Dimention Tables: 5 Dimention tables are created including referee_dim, team_dim, player_dim, venue_dim and match_type_dim tables while poluating data into them and establishing different relationship between them as well. (get code here)[] ]
+8. Creation of Date Dimention Table: A date dimention table is also created so as to link it to the match_fact_table. (get code here)[] 
+9. Creation of Fact_Tables: 2 Fact tables are created Match_type and Delivery tables and are both populated with data. (get code here)[] 
 
-## Report Design and Visualization
-The Report Canvas was designed in Power Point and imported to PowerBI as canvas background. Here is a sample of the slide in Power Point   
-<img src="https://github.com/Abdur-RasheedAde/Financial_Report/blob/main/Slide2.PNG" width=50% height=50%>  
-5 pages were created; Home, Consolidated, Stationery, Cosmetics and Electronics. 
-_Home_ page is the landing page while _Consolidated_ has the general report without filter while other pages has filtered reports accroding to their page name.
-On each page, the new card visual is used to hold Total Sales, Gross Sales and Profit, Line Chart is used for the series analysis while a column and bar chart are adopted for the Continental and Country analysis respectively. The last image is the button for page navigation. 
+## Data Visualization
+After all ETL process and data warehousing, some important metrics are visualized using the snowflake dashboard. This is a simple created dashboard with just 5 KPIs and can be accessed using the link below. However, this project was created using the free trial of snowflake and may not be accessible after 30 days of uplaod.
+
+The dashbord image is here <img src="https://github.com/Abdur-RasheedAde/Snowflake_Projects/blob/main/Simple_Snowflake%20Dashboard.PNG" width=50% height=50%>  
+Link to the dashboard is here [Click to view dashboard](https://app.snowflake.com/xelrqqi/zeb17834/#/cricket_match_dashboard-dK2zKZJf9)
+
 
 ## Conclusions and Recommedations
 
