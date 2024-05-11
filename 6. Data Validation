@@ -1,0 +1,26 @@
+//Data Validation
+-- South Africa vs Australia (12-10-2024)
+SELECT * 
+FROM CRICKET.CLEAN.MATCH_DETAIL_CLEAN
+WHERE MATCH_TYPE_NUMBER = 4667;
+
+
+-- Runs by each team of this match (South Africa vs Australia on 12-10-2024)
+SELECT 
+    team_name,
+    sum(runs) + sum(extras)
+FROM
+    delivery_clean_tbl
+WHERE match_type_number = 4667
+GROUP BY team_name
+ORDER BY 1,2 DESC;
+
+
+-- Score by individual players of this match South Africa vs Australia on 12-10-2024
+SELECT 
+    team_name, batter, sum(runs)
+FROM
+    delivery_clean_tbl
+WHERE match_type_number = 4667
+GROUP BY 1,2
+ORDER BY 1,2,3 DESC;
