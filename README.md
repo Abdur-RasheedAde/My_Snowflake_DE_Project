@@ -9,7 +9,6 @@ This is a Big Data-Data Engineering (End-to-end) project exploring snowflake clo
 The data used in this project is a json file injested directly from a folder;  
 * Microsoft Financial Sample Data [DownloadMicrosoftData](https://learn.microsoft.com/en-us/power-bi/create-reports/sample-financial-download)
 
-
 ## Problem Statement
 This project is aimed at improving business performance of Haut supermarket and hence, answer the following questions;
 1. What is the monthly trend of Profit?
@@ -21,19 +20,14 @@ This project is aimed at improving business performance of Haut supermarket and 
 7. What is the performance of the Africa market relative to other continent?
 8. Which country is most profitable?
 
-## Power BI and Analytics Technical Skills:
-+ Project Planning and Documentation
-+ Data Gathering
-+ Power Query
-+ Data Modelling
-+ Report Design
-+ Data Visualization
-+ Data Analysis Expression (DAX)
-+ Page Navigation and Button
-+ Business and Analytics Reporting
-+ Performance Optimization
-+ Deployment and Power BI Service
-+ Scalability
+## DE Technical Skills:
++ Schema Creation
++ Data Injestion
++ Data Warehousing
++ Extract, Transform and Load (ETL) process
++ Flattering of JSON file into a Table
++ Data Modelling (Fact and Dimention table)
++ Data Visualization - dashboard
 + Feedback and Continuous Improvement
   
 ## Data Modelling
