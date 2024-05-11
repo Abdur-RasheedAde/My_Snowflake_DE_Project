@@ -32,13 +32,11 @@ The data used is a Cricket World Cup match in 2023 which comes in a json file in
 
 ## Data Visualization
 After all ETL process and data warehousing, some important metrics are visualized using the snowflake dashboard. This is a simple created dashboard with just 5 KPIs and can be accessed using the link below. However, this project was created using the free trial of snowflake and may not be accessible after 30 days of uplaod.
+The dashbord image is here 👇
+<img src="https://github.com/Abdur-RasheedAde/Snowflake_Projects/blob/main/Simple_Snowflake%20Dashboard.PNG" width=50% height=50%>  
+Link to the dashboard is here 👉 [Click to view dashboard](https://app.snowflake.com/xelrqqi/zeb17834/#/cricket_match_dashboard-dK2zKZJf9)
 
-The dashbord image is here <img src="https://github.com/Abdur-RasheedAde/Snowflake_Projects/blob/main/Simple_Snowflake%20Dashboard.PNG" width=50% height=50%>  
-Link to the dashboard is here [Click to view dashboard](https://app.snowflake.com/xelrqqi/zeb17834/#/cricket_match_dashboard-dK2zKZJf9)
-
-
-## Conclusions and Recommedations
-
+## Conclusions 
 1. Haut needs to conduct market analysis to increase sales in Q1 and Q2 and offer seasonal products that appeal to customers in the first half of the year
 2. Haut’s management should continue their market strategy that leads to higher profits and better customer satisfaction
 3. The cosmetics product category demands more research and development to boost its sales and profitability
