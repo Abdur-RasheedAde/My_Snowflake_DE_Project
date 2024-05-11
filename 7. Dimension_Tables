@@ -1,4 +1,4 @@
-//CREATING DIMENTION TABLES
+//CREATING DIMENSION TABLES
 USE ROLE ACCOUNTADMIN;
 USE WAREHOUSE COMPUTE_WH;
 USE SCHEMA CRICKET.CONSUMPTION
@@ -37,13 +37,13 @@ create or replace table player_dim (
     player_name text not null
 );
 
---create relationship between team and player dimention tables
+--create relationship between team and player dimension tables
 alter table cricket.consumption.player_dim
 add constraint fk_team_player_id
 foreign key (team_id)
 references cricket.consumption.team_dim (team_id);
 
---create venue dimention table
+--create venue dimension table
 create or replace table venue_dim (
     venue_id int primary key autoincrement,
     venue_name text not null,
@@ -63,14 +63,14 @@ create or replace table venue_dim (
     longitude number(10,6)
 );
 
---create match dimention table with only match_type_id and match_type
+--create match dimension table with only match_type_id and match_type
 create or replace table match_type_dim (
     match_type_id int primary key autoincrement,
     match_type text not null
 );
 
-//POPULATE DATA INTO DIMENTION TABLES
---populating data into the team diemntion table
+//POPULATE DATA INTO DIMENSION TABLES
+--populating data into the team dimension table
 INSERT INTO CRICKET.CONSUMPTION.TEAM_DIM(team_name)
 SELECT DISTINCT team_name FROM (
     SELECT first_team as team_name from CRICKET.CLEAN.MATCH_DETAIL_CLEAN
@@ -83,7 +83,7 @@ order by team_name;
 select * from CRICKET.CONSUMPTION.TEAM_DIM;
 
 
---populating data into the team player diemntion table
+--populating data into the team player dimension table
 INSERT INTO CRICKET.CONSUMPTION.PLAYER_DIM(team_id, player_name)
 SELECT 
     T.team_id,
@@ -103,7 +103,7 @@ select * from CRICKET.CONSUMPTION.PLAYER_DIM
 ORDER BY 1
 
 
--- create a venue diemntion table 
+-- create a venue dimension table 
 INSERT INTO CRICKET.CONSUMPTION.VENUE_DIM(venue_name,city)
 SELECT
     venue,city 
@@ -124,7 +124,7 @@ GROUP BY
 SELECT * FROM CRICKET.CONSUMPTION.VENUE_DIM
 
 
---populate the match_type dimention table
+--populate the match_type dimension table
 INSERT INTO CRICKET.CONSUMPTION.MATCH_TYPE_DIM(match_type)
 SELECT match_type 
 FROM
