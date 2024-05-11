@@ -20,7 +20,7 @@ The data used is a Cricket World Cup match in 2023 which comes in a json file in
 + Feedback and Continuous Improvement
   
 ## Data Engineering Process
-1. Creation of Different Schema
+1. Creation of database and 4 Schemas: A database known as CRICKET is created with 4 Schemas for proper logical description of the entire database. The Star-schema was eventually used in Data Modelling so as to give the datawarehouse a legible understading (get the code here)[] 
 2. 
 To optimize the performance of the data model, a calendar table was created using the DAX function. The data model follows a star schema with one fact table and three dimension tables. The dimension tables have PRIMARY KEYS that connect to the corresponding FOREIGN KEYS in the fact table, forming a one-to-many relationship between each dimension table and the fact table. The diagram below shows the data model.  
 <img src="https://github.com/Abdur-RasheedAde/Financial_Report/blob/main/Data%20Modelling.PNG" width=50% height=50%>
