@@ -26,7 +26,7 @@ The data used is a Cricket World Cup match in 2023 which comes in a json file in
 4. Creation of Player and Country table: This is achieved by flattening the json objects in the RAW schema to create a Player and Country column Table (get code here). These 2 tables are connected with the help of a primary and foreign key respectively (get code here)[] 
 5. Extract Data from Inning Array: This is another strategy of the ETL process to transform an array into a proper column based table. This is used to get the Delivery clean Table
 6. Data Validation: There is an absolute need to check the degree of correctness of a data after the whole ETL process (get code here) [] 
-7.
+7. Creation of Dimention Tables: 3 Dimention tables are created including a Date table to be linked to the fact table in Data Modelling (getcode) []
 8. 
 ## Report Design and Visualization
 The Report Canvas was designed in Power Point and imported to PowerBI as canvas background. Here is a sample of the slide in Power Point   
