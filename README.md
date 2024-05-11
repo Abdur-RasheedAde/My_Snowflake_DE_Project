@@ -38,7 +38,7 @@ The dashbord image is here 👇
 Link to the dashboard is here 👉 [Click to view dashboard](https://app.snowflake.com/xelrqqi/zeb17834/#/cricket_match_dashboard-dK2zKZJf9)
 
 ## Conclusions 
-1. Snowflake is one of the leading cloud big data platform as a service (PaaS) for Data supporting both Python and SQL.
+1. Snowflake is one of the leading cloud big data Softaware as a service (SaaS) for Data supporting both Python and SQL.
 2. It is awesome for Data warehousing and ETL process and simple visualization dashboard.
 
 Thanks for taking time to go through this report! and I am open to collaborate with you on any Data Engineering projects exploring snowflake or other cloud big data platforms especially Azure, AWS, GCP and Databricks, you can always reach me on adeoyerasheed30@gmail.com Ciao 🤝
