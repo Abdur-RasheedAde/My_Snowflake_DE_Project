@@ -22,7 +22,8 @@ The data used is a Cricket World Cup match in 2023 which comes in a json file in
 ## Data Engineering Process
 1. Creation of database and 4 Schemas: A database (DB) known as CRICKET is created with 4 Schemas (LAND, RAW, CLEAN and CONSUMPTION) for proper logical description and arrangement of the DB. The Star-schema was eventually used in Data Modelling so as to give the datawarehouse a legible understading (get the code here)[] 
 2. Data Injestion and Loading: Data is injested into the LAND schema and reloaded into the RAW schema (access the code here)[]
-3. njest Data into the RAW Schema
+3. Flattening of Data: A clean table is created to host a flattened json data into a proper column based table (get code here)[]
+4. Creation of Player andCountry table: This is achieved by flattening the json data in the RAW schema to create a Player and Country column Table (get code here). These 2 tables are connected with the help of a primary and foreign key respectively (get code here)[] 
 To optimize the performance of the data model, a calendar table was created using the DAX function. The data model follows a star schema with one fact table and three dimension tables. The dimension tables have PRIMARY KEYS that connect to the corresponding FOREIGN KEYS in the fact table, forming a one-to-many relationship between each dimension table and the fact table. The diagram below shows the data model.  
 <img src="https://github.com/Abdur-RasheedAde/Financial_Report/blob/main/Data%20Modelling.PNG" width=50% height=50%>
 
