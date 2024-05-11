@@ -20,7 +20,7 @@ The data used is a Cricket World Cup match in 2023 which comes in a json file in
 + Feedback and Continuous Improvement
   
 ## Data Engineering Process
-1. Creation of database and 4 Schemas: A database (DB) known as CRICKET is created with 4 Schemas (LAND, RAW, CLEAN and CONSUMPTION) for proper logical description and arrangement of the DB. The Star-schema was eventually used in Data Modelling so as to give the datawarehouse a legible understading. (get the code here)[] 
+1. Creation of database and 4 Schemas: A database (DB) known as CRICKET is created with 4 Schemas (LAND, RAW, CLEAN and CONSUMPTION) for proper logical description and arrangement of the DB. The Star-schema was eventually used in Data Modelling so as to give the datawarehouse a legible understading. [Get the code here](https://github.com/Abdur-RasheedAde/Snowflake_Projects/blob/main/1.%20Schema_CREATION) 
 2. Data Injestion and Loading: Data is injested into the LAND schema and reloaded into the RAW schema. (access the code here)[]
 3. Flattening of Data: Since the data uploaded are ojects, they need to be flatenned so as to create the CLEAN proper column based table. (get code here)[]
 4. Creation of Player and Country table: This is achieved by flattening the json objects in the RAW schema to create a Player and Country column Table (get code here). These 2 tables are connected with the help of a primary and foreign key respectively. (get code here)[] 
@@ -32,21 +32,13 @@ The data used is a Cricket World Cup match in 2023 which comes in a json file in
 
 ## Data Visualization
 After all ETL process and data warehousing, some important metrics are visualized using the snowflake dashboard. This is a simple created dashboard with just 5 KPIs and can be accessed using the link below. However, this project was created using the free trial of snowflake and may not be accessible after 30 days of uplaod.
+
 The dashbord image is here 👇
-<img src="https://github.com/Abdur-RasheedAde/Snowflake_Projects/blob/main/Simple_Snowflake%20Dashboard.PNG" width=50% height=50%>  
+<img src="https://github.com/Abdur-RasheedAde/Snowflake_Projects/blob/main/Simple_Snowflake%20Dashboard.PNG" width=75% height=75%>  
 Link to the dashboard is here 👉 [Click to view dashboard](https://app.snowflake.com/xelrqqi/zeb17834/#/cricket_match_dashboard-dK2zKZJf9)
 
 ## Conclusions 
-1. Haut needs to conduct market analysis to increase sales in Q1 and Q2 and offer seasonal products that appeal to customers in the first half of the year
-2. Haut’s management should continue their market strategy that leads to higher profits and better customer satisfaction
-3. The cosmetics product category demands more research and development to boost its sales and profitability
-4. Promotions (discounts) drive most of the sales in Haut stores, making them competitive in the dynamic market. Therefore, other promotional and marketing strategies should be implemented to enhance sales and profit
-5. Products in Africa and China stores should be tailored to the specific needs of these markets through careful research
+1. Snowflake is one of the leading cloud big data platform as a service (PaaS) for Data supporting both Python and SQL.
+2. It is awesome for Data warehousing and ETL process and simple visualization dashboard.
 
-## Deployment to Power BI Service
-This Report is deployed to Power BI service from my Microsoft developer account and publish to the web for everyone to have access to it.
-[HautSupermarketAnalysis](https://app.powerbi.com/groups/me/reports/66ab0071-4b25-41c8-99fd-fd006603aacd/ReportSection6239a8326550e132bae6?ctid=32796be2-60fb-4da2-8d26-06e5938e6e6b&experience=power-bi)  
-
-To Open a developer Microsoft account, kindly check this article [OpenMicrosoftdeveloperaccount](https://techcommunity.microsoft.com/t5/educator-developer-blog/register-for-microsoft-365-and-power-apps-developer-account-with/ba-p/3490280)
-
-Thanks for taking time to go through this report! 🤝
+Thanks for taking time to go through this report! and I am open to collaborate with you on any Data Engineering projects exploring snowflake or other cloud big data platforms especially Azure, AWS, GCP and Databricks, Ciao 🤝
