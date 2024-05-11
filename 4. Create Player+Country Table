@@ -1,0 +1,76 @@
+--extract players data
+--step 1
+        SELECT 
+        raw.info:match_type_number::int as match_type_number,
+        raw.info:players,
+        raw.info:teams
+    FROM cricket.raw.match_raw_tbl raw;
+
+--step 2 extract specific data of a match_type_number = 4691 
+        SELECT 
+        raw.info:match_type_number::int as match_type_number,
+        raw.info:players,
+        raw.info:teams
+    FROM cricket.raw.match_raw_tbl raw
+    WHERE match_type_number = 4691;
+
+--step 3 flatten the country obejct 
+    SELECT 
+        raw.info:match_type_number::int as match_type_number,
+        p.key::text as country
+    FROM cricket.raw.match_raw_tbl raw,
+    lateral flatten (input => raw.info:players) p
+    WHERE match_type_number = 4691;
+
+--step4 flatten the country and player data 
+    SELECT 
+        raw.info:match_type_number::int as match_type_number,
+        p.key::text as country,
+        team.value::text as player_name
+    FROM cricket.raw.match_raw_tbl raw,
+    lateral flatten (input => raw.info:players) p,
+    lateral flatten (input => p.value) team
+    WHERE match_type_number = 4691;
+
+-- step 5 --create table for player
+create or replace table cricket.clean.player_clean_tbl as
+ SELECT 
+        raw.info:match_type_number::int as match_type_number,
+        p.key::text as country,
+        team.value::text as player_name,
+        raw.stg_file_name,
+        raw.stg_file_row_number,
+        raw.stg_file_hashkey,
+        raw.stg_modified_ts
+    FROM cricket.raw.match_raw_tbl raw,
+    lateral flatten (input => raw.info:players) p,
+    lateral flatten (input => p.value) team;
+  
+-- describing the table
+desc table cricket.clean.player_clean_tbl
+
+-- add not null 
+alter table cricket.clean.player_clean_tbl
+modify column match_type_number set not null;
+
+-- add not null 
+alter table cricket.clean.player_clean_tbl
+modify column country set not null;
+
+-- add not null 
+alter table cricket.clean.player_clean_tbl
+modify column player_name set not null;
+
+alter table CRICKET.CLEAN.MATCH_DETAIL_CLEAN 
+add constraint pk_match_type_number primary key (match_type_number)
+
+-- fk relationship
+alter table cricket.clean.player_clean_tbl
+add constraint fk_delivery_match_id
+foreign key (match_type_number)
+references cricket.clean.match_detail_clean (match_type_number);
+
+-- check the constaraint functionality 
+-- cant't Display with just desc function (desc table cricket.clean.player_clean_tbl)
+select get_ddl('table','cricket.clean.player_clean_tbl')
+
