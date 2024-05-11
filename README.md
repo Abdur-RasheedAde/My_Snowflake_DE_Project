@@ -6,19 +6,8 @@
 This is a Big Data-Data Engineering (End-to-end) project exploring snowflake cloud. The project injest a json file, perform all necessary ETL processes and created a Snowflake dashboard to visualise the data. 
 
 ## Data Source:
-The data used in this project is a json file injested directly from a folder;  
-* Microsoft Financial Sample Data [DownloadMicrosoftData](https://learn.microsoft.com/en-us/power-bi/create-reports/sample-financial-download)
-
-## Problem Statement
-This project is aimed at improving business performance of Haut supermarket and hence, answer the following questions;
-1. What is the monthly trend of Profit?
-2. What is the ratio of profit of the years under review?
-3. What is the profit ratio on quarterly basis?
-4. Which product category is the most and least profitable?
-5. Where does most sales comes from in terms of region?
-6. Does discount has an effect on Sales?
-7. What is the performance of the Africa market relative to other continent?
-8. Which country is most profitable?
+The data used is a Cricket World Cup match in 2023 which comes in a json file injested directly from a folder;  
+* Cricket World Cup Match in 2023 [Downloadjsonfilehere](https://drive.google.com/drive/folders/1ls9ST-q6c2fCZZOuaC8Bd5lugrTKbVIE?usp=drive_link)
 
 ## DE Technical Skills:
 + Schema Creation
@@ -30,7 +19,9 @@ This project is aimed at improving business performance of Haut supermarket and 
 + Data Visualization - dashboard
 + Feedback and Continuous Improvement
   
-## Data Modelling
+## Data Engineering Process
+1. Creation of Different Schema
+2. 
 To optimize the performance of the data model, a calendar table was created using the DAX function. The data model follows a star schema with one fact table and three dimension tables. The dimension tables have PRIMARY KEYS that connect to the corresponding FOREIGN KEYS in the fact table, forming a one-to-many relationship between each dimension table and the fact table. The diagram below shows the data model.  
 <img src="https://github.com/Abdur-RasheedAde/Financial_Report/blob/main/Data%20Modelling.PNG" width=50% height=50%>
 
