@@ -1,9 +1,9 @@
-# Cricket Analaysis Project with Snowflake
+# Cricket Analysis Project with Snowflake
 
 ![Slide1](https://github.com/Abdur-RasheedAde/Snowflake_Projects/blob/main/SNOWFLAKEHOME.png)
 
 ##  Introduction
-This is a Big Data-Data Engineering (End-to-end) project exploring snowflake cloud. The project injest a json file, perform all necessary ETL processes and created a Snowflake dashboard to visualise the data. 
+This is a Big Data(Data Engineering) End-to-end project exploring snowflake cloud. The project injest a json file, perform all necessary ETL processes and created a Snowflake dashboard to visualise the data. 
 
 ## Data Source:
 The data used is a Cricket World Cup match in 2023 which comes in a json file injested directly from a folder;  
