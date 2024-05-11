@@ -3,12 +3,12 @@
 ![Slide1](https://github.com/Abdur-RasheedAde/Snowflake_Projects/blob/main/SNOWFLAKEHOME.png)
 
 ##  Introduction
-This is a Big Data (End-to-end) project exploring snowflake cloud. The project injest a json file, perform all necessary ETL processes and load load it to appropriate datawarehuse 
+This is a Big Data-Data Engineering (End-to-end) project exploring snowflake cloud. The project injest a json file, perform all necessary ETL processes and created a Snowflake dashboard to visualise the data. 
 
 ## Data Source:
-The data used in this project is a json file;  
+The data used in this project is a json file injested directly from a folder;  
 * Microsoft Financial Sample Data [DownloadMicrosoftData](https://learn.microsoft.com/en-us/power-bi/create-reports/sample-financial-download)
-* Modified Dataset used in this Project [DownloadModifiedDataset](https://docs.google.com/spreadsheets/u/2/d/1xkWC6Jlk_YZECHbpUtoc8AEiPb9jfcld/edit?usp=drive_web&ouid=114068862415751566917&rtpof=true)
+
 
 ## Problem Statement
 This project is aimed at improving business performance of Haut supermarket and hence, answer the following questions;
