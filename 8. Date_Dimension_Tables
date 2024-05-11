@@ -1,5 +1,5 @@
 
---populating the date dimention table
+--populating the date dimension table
 --check the minimun and maximun date
 SELECT MIN(event_date), max(event_date) FROM cricket.clean.match_detail_clean;
 
