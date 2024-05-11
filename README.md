@@ -11,7 +11,7 @@ The data used is a Cricket World Cup match in 2023 which comes in a json file in
 
 ## DE Technical Skills:
 + Schema Creation
-+ Data Injestion
++ Data Ingestion
 + Data Warehousing
 + Extract, Transform and Load (ETL) process
 + Flattering of JSON file into a Table
@@ -21,7 +21,7 @@ The data used is a Cricket World Cup match in 2023 which comes in a json file in
   
 ## Data Engineering Process
 1. Creation of database and 4 Schemas: A database (DB) known as CRICKET is created with 4 Schemas (LAND, RAW, CLEAN and CONSUMPTION) for proper logical description and arrangement of the DB. The Star-schema was eventually used in Data Modelling so as to give the datawarehouse a legible understading. [Get the code here](https://github.com/Abdur-RasheedAde/Snowflake_Projects/blob/main/1.%20Schema_CREATION_and_Data_Injestion) 
-2. Data Injestion and Loading: Data is injested into the LAND schema and reloaded into the RAW schema. [Get the code here](https://github.com/Abdur-RasheedAde/Snowflake_Projects/blob/main/2.%20Data_Loading_into_RAW_Schema) 
+2. Data Ingestion and Loading: Data is injested into the LAND schema and reloaded into the RAW schema. [Get the code here](https://github.com/Abdur-RasheedAde/Snowflake_Projects/blob/main/2.%20Data_Loading_into_RAW_Schema) 
 3. Flattening of Data: Since the data uploaded are ojects, they need to be flatenned so as to create the CLEAN proper column based table. [Get the code here](https://github.com/Abdur-RasheedAde/Snowflake_Projects/blob/main/3.%20Flatten_json_into_CLEAN_table) 
 4. Creation of Player and Country table: This is achieved by flattening the json objects in the RAW schema to create a Player and Country column Table (get code here). These 2 tables are connected with the help of a primary and foreign key respectively. [Get the code here](https://github.com/Abdur-RasheedAde/Snowflake_Projects/blob/main/4.%20Player_and_Country_Table) 
 5. Extract Data from Inning Array: This is another strategy of the ETL process to transform an array into a proper column based table. This is used to get the Delivery clean Table. [Get the code here](https://github.com/Abdur-RasheedAde/Snowflake_Projects/blob/main/5.%20Delivery_Table)
